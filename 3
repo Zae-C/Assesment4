@@ -1,10 +1,24 @@
 import random
 
-biome = random.randrange(2)
-print(biome)
-def MonsterGen(biome)
-    monster=random.randrange(99)
-    if biome == 0:
-        
-    elif biome ==1:
+def MonsterGen(biome):
+    randNum = random.randint(0,100)
+    if biome == 'd':
+        if randNum < 20:
+            print("Husk")
+        elif randNum < 50:
+            print("Spider")
+        elif randNum < 100:
+            print("Skeleton")
+    if biome == 'f':
+        if randNum < 30:
+            print("Zombie")
+        elif randNum < 60:
+            print("Skeleton")
+        elif randNum < 70:
+            print("Witch")
+        elif randNum < 100:
+            print("Nothing spawned")
+
+MonsterGen('f')
+MonsterGen('d')
 
